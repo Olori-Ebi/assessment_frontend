@@ -1,6 +1,6 @@
 import "./register.css";
 import Autocomplete from "react-google-autocomplete";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
@@ -130,6 +130,7 @@ export default function RegisterComponent({setIsLoggedIn}) {
           Register
         </button>
       </form>
+      <p>Already have an account?? Click to <Link to="/signin">Sign in</Link></p>
     </div>
   );
 }

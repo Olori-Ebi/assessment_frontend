@@ -1,7 +1,7 @@
 import "./signin.css";
 import axios from 'axios'
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SigninComponent({setIsLoggedIn}) {
     const navigate = useNavigate();
@@ -64,6 +64,7 @@ export default function SigninComponent({setIsLoggedIn}) {
           Login
         </button>
       </form>
+      <p>Don't have an account?? Click to <Link to="/register">Sign up</Link></p>
     </div>
   );
 }

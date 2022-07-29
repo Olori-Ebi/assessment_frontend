@@ -10,6 +10,29 @@ textarea {
     resize: none;
   }
 
+  .comment-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #ccc;
+  }
+
+  .comment-text {
+    margin-left: 30px;
+  }
   .comments {
-    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .reply-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
   }

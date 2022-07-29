@@ -52,9 +52,8 @@ function Comment({ comments, id }) {
       }
   };
   return (
-    <>
+    <div className="comment-container">
       <div className="comments">
-        <h3 className="comments-title">Comments</h3>
         <div className="comment-form-title">Write comment</div>
         <textarea value={text} onChange={handleChange} />
         <button onClick={() => handleClick(id)}>Submit</button>
@@ -68,7 +67,7 @@ function Comment({ comments, id }) {
                 <i> {comment.text} </i>
               </div>
             </div>
-            <div style={{ marginLeft: "50px", marginTop: "30px"}}>
+            <div className="reply-container" style={{ marginLeft: "50px"}}>
               {comment?.replies.length > 0 && comment.replies.map(reply => (
                 <div key={reply._id} style={{ marginLeft: "50px", marginTop: "30px"}} className="reply-text">
                 <small>{reply.user.firstName} {reply.user.lastName}</small>
@@ -77,7 +76,7 @@ function Comment({ comments, id }) {
                 </div>
               </div>
               ))}
-              <div>
+              <div style={{marginBottom: '15px'}}>
                 <input
                   className="reply-input"
                     onChange={(e) => setReplyText(e.target.value)}
@@ -89,7 +88,7 @@ function Comment({ comments, id }) {
             </div>
           </div>
         ))}
-    </>
+    </div>
   );
 }
 
